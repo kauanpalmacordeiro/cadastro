@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cartão">
+        <h1 id="titulo"> Fazer Cadastro </h1>
+        <form>
+            <label for="nome"> nome </label>
+            <input type="text" class="conteudo" id="nome" name="nome_usuario" autocomplete="name" required>
+            <label for="email"> email </label>
+            <input type="email" class="conteudo" id="email" name="email" autocomplete="email" required>
+            <label for="senha"> senha </label>
+            <input type="password" class="conteudo" id="senha" name="senha" minlength="12" autocomplete="new-password"
+                required>
+                
+            <label for="confirmar"> Confirmar senha </label>
+            <input type="password" class="conteudo" id="confirmar" minlength="12" autocomplete="new-password" required>
+            <button type="submit"> Entrar </button>
+        </form>
+        <p id="mensagem"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

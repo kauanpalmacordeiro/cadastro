@@ -1,19 +1,24 @@
-const botao = document.querySelector("button");
+let form = document.querySelector("form")
 
-botao.addEventListener("click", function(){
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); 
     let nome = document.getElementById("nome").value
     let email = document.getElementById("email").value
     let senha = document.getElementById("senha").value
+    let confirmar = document.getElementById("confirmar").value
 
-    if (nome.trim() === "" || email.trim() === "" || senha.trim() === "") {
-        document.getElementById("mensagem").textContent = "Preecnha todos os campos"
-    }
-
-    /* paramos aqui, onde proximo passo é criar um else para verificar
-    caso o usuario tenha prrecnhido todos os campos e mudar a cor pra verde e "preenchidos"*/
-
-    else if (nome.trim() !== "" || email.trim() !== "" || senha.trim() !== "") {
-        document.getElementById("mensagem").textContent = "Preecnha todos os campos".style.color.green
-    }
     
+    if (nome.trim() === "" || email.trim() === "" || senha.trim() === "" || confirmar.trim() === "") {
+        document.getElementById("mensagem").style.color = "red"
+        document.getElementById("mensagem").textContent = "Preencha todos os campos"
+    }
+
+    else if (senha !== confirmar) {
+        document.getElementById("mensagem").textContent = "As senhas estão diferentes"
+    }
+
+    else  {
+        document.getElementById("mensagem").textContent = "Campos preenchidos"
+        document.getElementById("mensagem").style.color = "green"
+    }
 })

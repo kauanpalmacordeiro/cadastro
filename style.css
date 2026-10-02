@@ -20,20 +20,30 @@ body {
     background-color: rgb(190, 186, 186);
     margin: 120px;
     border-radius: 15px;
-    overflow: hidden;
+    
 }
 
 .conteudo {
     appearance: none;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(146, 29, 255);
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
+    
 }
 
 button:hover {

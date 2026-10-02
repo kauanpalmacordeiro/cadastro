@@ -1,0 +1,19 @@
+<form id="sugestao">
+    <label for="livro">Título do livro:</label>
+    <input id="livro" name="livro" type="text">
+
+    <button type="submit">Enviar sugestão</button>
+</form>
+
+<p id="aviso"></p>
+
+<script>
+    const formulario = document.getElementById("sugestao");
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        document.getElementById("aviso").textContent =
+            "O envio do formulário foi detectado!";
+    });
+</script>
