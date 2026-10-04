@@ -10,6 +10,8 @@ body {
     background-color: rgb(82, 25, 134);
 }
 
+
+
 #cartão {
     display: flex;
     justify-content: center;
@@ -17,21 +19,36 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-color: rgb(190, 186, 186);
-    margin: 120px;
+    background-color: rgb(221, 220, 220);
+    margin: 50px;
     border-radius: 15px;
     
 }
 
-.conteudo {
+label {
+    color: blueviolet;
+    font-size: 18px;
+}
+
+input {
     appearance: none;
     box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    border: none;
+    padding: 3px;
+    outline: 0px solid purple;
+    border: 1px solid black;
+    transition: 1s;
 }
+
+input:focus {
+    border: 1px solid black;
+}
+
+
 
 button {
     display: flex;
@@ -43,6 +60,8 @@ button {
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 20px;
+    margin-left: 40px;
     
 }
 
@@ -55,3 +74,4 @@ button:hover {
 #mensagem {
     color: rgba(255, 0, 0, 0.685);
 }
+
